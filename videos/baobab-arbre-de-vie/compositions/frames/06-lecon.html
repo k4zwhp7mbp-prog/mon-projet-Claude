@@ -1,0 +1,55 @@
+<template>
+<style>
+
+  @font-face { font-family: "Source Serif 4"; src: url("assets/fonts/source-serif-4-latin-opsz-normal.woff2") format("woff2"); font-weight: 200 900; font-style: normal; }
+  @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; }
+  #root { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; container-type: size; font-family: "Source Serif 4", serif; font-optical-sizing: auto; }
+  #root .f06-lecon-bg { position: absolute; inset: 0; }
+  #root .f06-lecon-topbar { position: absolute; left: 5cqw; right: 5cqw; top: 3.4cqw; display: flex; justify-content: space-between; align-items: center; font-family: "JetBrains Mono", monospace; font-weight: 500; font-size: 26px; letter-spacing: 0.18em; text-transform: uppercase; padding-bottom: 18px; border-bottom: 2px solid currentColor; }
+  #root .f06-lecon-mono { font-family: "JetBrains Mono", monospace; font-weight: 500; text-transform: uppercase; letter-spacing: 0.16em; }
+
+  #root .f06-lecon-bg { background: #2e4a2a; }
+  #root .f06-lecon-topbar { color: #efe7d4; }
+
+  #root .f06-lecon-verbs { position: absolute; left: 0; right: 0; top: 24cqh; text-align: center; font-size: 4.4cqw; font-weight: 500; letter-spacing: -0.02em; color: #efe7d4; }
+  #root .f06-lecon-v, #root .f06-lecon-dot { display: inline-block; margin: 0 1.2cqw; }
+  #root .f06-lecon-dot { color: #e89cb1; }
+  #root .f06-lecon-rule { position: absolute; left: 30cqw; right: 30cqw; top: 42cqh; height: 2px; background: #e89cb1; transform-origin: 50% 50%; }
+  #root .f06-lecon-hero { position: absolute; left: 0; right: 0; top: 50cqh; text-align: center; font-size: 9cqw; font-weight: 500; line-height: 0.92; letter-spacing: -0.02em; color: #e89cb1; }
+  #root .f06-lecon-mono-c { position: absolute; right: 5cqw; top: 12cqh; }
+  #root .f06-lecon-fade { position: absolute; inset: 0; background: #000; opacity: 0; }
+
+</style>
+<div id="root" data-composition-id="06-lecon" data-start="0" data-duration="5.0" data-width="1920" data-height="1080">
+  <div class="f06-lecon-bg clip" id="f06-lecon-bg" data-start="0" data-duration="5.0" data-track-index="0"></div>
+  <div class="f06-lecon-stage clip" id="f06-lecon-stage" data-start="0" data-duration="5.0" data-track-index="1">
+    <div class="f06-lecon-topbar" id="f06-lecon-topbar"><span>Le baobab</span><span>06 / 06</span></div>
+
+    <div class="f06-lecon-verbs"><span class="f06-lecon-v" id="f06-lecon-v1">nourrit</span><span class="f06-lecon-dot" id="f06-lecon-d1">·</span><span class="f06-lecon-v" id="f06-lecon-v2">abreuve</span><span class="f06-lecon-dot" id="f06-lecon-d2">·</span><span class="f06-lecon-v" id="f06-lecon-v3">rassemble</span></div>
+    <div class="f06-lecon-rule" id="f06-lecon-rule"></div>
+    <div class="f06-lecon-hero" id="f06-lecon-hero">Protégeons-le.</div>
+    <svg class="f06-lecon-mono-c" id="f06-lecon-circle" width="130" height="130" viewBox="0 0 130 130"><circle cx="65" cy="65" r="62" fill="none" stroke="#e89cb1" stroke-width="2" stroke-dasharray="390" stroke-dashoffset="390" id="f06-lecon-ring"/><text x="65" y="80" text-anchor="middle" font-family="JetBrains Mono" font-size="40" fill="#e89cb1">B</text></svg>
+    <div class="f06-lecon-fade" id="f06-lecon-fade"></div>
+  </div>
+</div>
+<script>
+(function () {
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#f06-lecon-topbar", { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0);
+
+  tl.fromTo("#f06-lecon-v1", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.35);
+  tl.fromTo("#f06-lecon-d1", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.8);
+  tl.fromTo("#f06-lecon-v2", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.95);
+  tl.fromTo("#f06-lecon-d2", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 1.4);
+  tl.fromTo("#f06-lecon-v3", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.6);
+  tl.fromTo("#f06-lecon-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power2.inOut" }, 2.2);
+  tl.fromTo("#f06-lecon-hero", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 2.5);
+  tl.fromTo("#f06-lecon-ring", { strokeDashoffset: 390 }, { strokeDashoffset: 0, duration: 1.0, ease: "power2.inOut" }, 2.7);
+  tl.fromTo("#f06-lecon-hero", { scale: 1 }, { scale: 1.03, duration: 1.7, ease: "none", immediateRender: false }, 3.3);
+  tl.fromTo("#f06-lecon-fade", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power1.in" }, 4.4);
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines["06-lecon"] = tl;
+})();
+</script>
+</template>

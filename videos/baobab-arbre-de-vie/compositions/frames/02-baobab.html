@@ -1,0 +1,58 @@
+<template>
+<style>
+
+  @font-face { font-family: "Source Serif 4"; src: url("assets/fonts/source-serif-4-latin-opsz-normal.woff2") format("woff2"); font-weight: 200 900; font-style: normal; }
+  @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; }
+  #root { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; container-type: size; font-family: "Source Serif 4", serif; font-optical-sizing: auto; }
+  #root .f02-baobab-bg { position: absolute; inset: 0; }
+  #root .f02-baobab-topbar { position: absolute; left: 5cqw; right: 5cqw; top: 3.4cqw; display: flex; justify-content: space-between; align-items: center; font-family: "JetBrains Mono", monospace; font-weight: 500; font-size: 26px; letter-spacing: 0.18em; text-transform: uppercase; padding-bottom: 18px; border-bottom: 2px solid currentColor; }
+  #root .f02-baobab-mono { font-family: "JetBrains Mono", monospace; font-weight: 500; text-transform: uppercase; letter-spacing: 0.16em; }
+
+  #root .f02-baobab-bg { background: #2e4a2a; }
+  #root .f02-baobab-topbar { color: #efe7d4; }
+
+  #root .f02-baobab-tree { position: absolute; left: 11cqw; top: 17cqh; }
+  #root .f02-baobab-draw { fill: none; stroke: #efe7d4; stroke-width: 8; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 100; }
+  #root .f02-baobab-name { position: absolute; left: 48cqw; top: 36cqh; font-size: 7.3cqw; font-weight: 500; line-height: 1.02; letter-spacing: -0.02em; color: #efe7d4; }
+  #root .f02-baobab-tag { position: absolute; left: 48.3cqw; top: 55cqh; font-size: 1.6cqw; color: #e89cb1; padding-top: 1.2cqw; border-top: 2px solid #e89cb1; }
+
+</style>
+<div id="root" data-composition-id="02-baobab" data-start="0" data-duration="5" data-width="1920" data-height="1080">
+  <div class="f02-baobab-bg clip" id="f02-baobab-bg" data-start="0" data-duration="5" data-track-index="0"></div>
+  <div class="f02-baobab-stage clip" id="f02-baobab-stage" data-start="0" data-duration="5" data-track-index="1">
+    <div class="f02-baobab-topbar" id="f02-baobab-topbar"><span>Le baobab</span><span>02 / 06</span></div>
+
+    <svg class="f02-baobab-tree" id="f02-baobab-tree" viewBox="0 0 520 620" width="560" height="668">
+      <g fill="#e89cb1"><circle class="f02-baobab-leaf" cx="60" cy="238" r="20" /><circle class="f02-baobab-leaf" cx="85" cy="193" r="15" /><circle class="f02-baobab-leaf" cx="150" cy="198" r="17" /><circle class="f02-baobab-leaf" cx="170" cy="166" r="13" /><circle class="f02-baobab-leaf" cx="258" cy="182" r="18" /><circle class="f02-baobab-leaf" cx="370" cy="198" r="17" /><circle class="f02-baobab-leaf" cx="350" cy="166" r="13" /><circle class="f02-baobab-leaf" cx="460" cy="238" r="20" /><circle class="f02-baobab-leaf" cx="435" cy="193" r="15" /><circle class="f02-baobab-leaf" cx="118" cy="222" r="11" /><circle class="f02-baobab-leaf" cx="402" cy="222" r="11" /></g>
+      <path class="f02-baobab-draw" pathLength="100" d="M175 600 C 150 490, 148 370, 195 292 L 325 292 C 372 370, 370 490, 345 600" />
+      <path class="f02-baobab-draw" pathLength="100" d="M200 294 C 170 262, 120 246, 60 240" />
+      <path class="f02-baobab-draw" pathLength="100" d="M225 292 C 210 252, 180 216, 150 200" />
+      <path class="f02-baobab-draw" pathLength="100" d="M260 292 C 262 252, 262 220, 258 186" />
+      <path class="f02-baobab-draw" pathLength="100" d="M295 292 C 310 252, 340 216, 370 200" />
+      <path class="f02-baobab-draw" pathLength="100" d="M320 294 C 350 262, 400 246, 460 240" />
+      <path class="f02-baobab-draw" pathLength="100" d="M112 247 C 102 228, 95 212, 85 196" />
+      <path class="f02-baobab-draw" pathLength="100" d="M178 222 C 181 202, 178 186, 170 169" />
+      <path class="f02-baobab-draw" pathLength="100" d="M342 222 C 339 202, 342 186, 350 169" />
+      <path class="f02-baobab-draw" pathLength="100" d="M408 247 C 418 228, 425 212, 435 196" />
+      <path class="f02-baobab-draw" pathLength="100" d="M120 604 L 400 604" />
+    </svg>
+    <div class="f02-baobab-name" id="f02-baobab-name">Le baobab</div>
+    <div class="f02-baobab-tag f02-baobab-mono" id="f02-baobab-tag">L’arbre de vie · Afrique</div>
+  </div>
+</div>
+<script>
+(function () {
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#f02-baobab-topbar", { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0);
+
+  tl.fromTo("#f02-baobab-tree", { scale: 1 }, { scale: 1.03, duration: 4.5, ease: "none", transformOrigin: "50% 100%" }, 0);
+  tl.fromTo("#f02-baobab-tree .f02-baobab-draw", { strokeDashoffset: 100 }, { strokeDashoffset: 0, duration: 1.8, ease: "power2.inOut", stagger: 0.09 }, 0.1);
+  tl.fromTo("#f02-baobab-name", { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 0.8, ease: "power3.out" }, 1.0);
+  tl.fromTo("#f02-baobab-tree .f02-baobab-leaf", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.45, ease: "back.out(2)", stagger: 0.08 }, 2.0);
+  tl.fromTo("#f02-baobab-tag", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, 2.3);
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines["02-baobab"] = tl;
+})();
+</script>
+</template>

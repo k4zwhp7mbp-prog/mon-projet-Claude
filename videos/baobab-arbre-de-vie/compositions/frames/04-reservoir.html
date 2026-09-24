@@ -1,0 +1,64 @@
+<template>
+<style>
+
+  @font-face { font-family: "Source Serif 4"; src: url("assets/fonts/source-serif-4-latin-opsz-normal.woff2") format("woff2"); font-weight: 200 900; font-style: normal; }
+  @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; }
+  #root { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; container-type: size; font-family: "Source Serif 4", serif; font-optical-sizing: auto; }
+  #root .f04-reservoir-bg { position: absolute; inset: 0; }
+  #root .f04-reservoir-topbar { position: absolute; left: 5cqw; right: 5cqw; top: 3.4cqw; display: flex; justify-content: space-between; align-items: center; font-family: "JetBrains Mono", monospace; font-weight: 500; font-size: 26px; letter-spacing: 0.18em; text-transform: uppercase; padding-bottom: 18px; border-bottom: 2px solid currentColor; }
+  #root .f04-reservoir-mono { font-family: "JetBrains Mono", monospace; font-weight: 500; text-transform: uppercase; letter-spacing: 0.16em; }
+
+  #root .f04-reservoir-bg { background: #efe7d4; }
+  #root .f04-reservoir-topbar { color: #2e4a2a; }
+
+  #root .f04-reservoir-trunk { position: absolute; left: 9cqw; top: 21cqh; overflow: visible; }
+  #root .f04-reservoir-outline { fill: none; stroke: #2e4a2a; stroke-width: 6; stroke-dasharray: 1500; stroke-dashoffset: 1500; stroke-linejoin: round; }
+  #root .f04-reservoir-side { position: absolute; left: 44cqw; top: 25cqh; }
+  #root .f04-reservoir-tag { font-size: 1.35cqw; color: #2e4a2a; padding-top: 1cqw; border-top: 2px solid #d27e96; display: inline-block; }
+  #root .f04-reservoir-fig { font-size: 11.5cqw; font-weight: 500; line-height: 1.1; letter-spacing: -0.03em; color: #2e4a2a; margin-top: 3cqw; font-variant-numeric: tabular-nums; }
+  #root .f04-reservoir-unit { font-size: 5.7cqw; font-weight: 500; line-height: 1.1; color: #b96f84; margin-top: 1.2cqw; }
+  #root .f04-reservoir-note { font-size: 1.35cqw; color: #2e4a2a; margin-top: 2.4cqw; }
+
+</style>
+<div id="root" data-composition-id="04-reservoir" data-start="0" data-duration="6.5" data-width="1920" data-height="1080">
+  <div class="f04-reservoir-bg clip" id="f04-reservoir-bg" data-start="0" data-duration="6.5" data-track-index="0"></div>
+  <div class="f04-reservoir-stage clip" id="f04-reservoir-stage" data-start="0" data-duration="6.5" data-track-index="1">
+    <div class="f04-reservoir-topbar" id="f04-reservoir-topbar"><span>Le baobab</span><span>04 / 06</span></div>
+
+    <svg class="f04-reservoir-trunk" id="f04-reservoir-trunk" viewBox="0 0 420 560" width="420" height="560">
+      <defs><clipPath id="f04-reservoir-clip"><path d="M110 20 C 40 120, 20 300, 60 540 L 360 540 C 400 300, 380 120, 310 20 Z" /></clipPath></defs>
+      <g clip-path="url(#f04-reservoir-clip)">
+        <g id="f04-reservoir-water"><path d="M0 0 Q 52 -18 105 0 T 210 0 T 315 0 T 420 0 L 420 560 L 0 560 Z" fill="#2e4a2a" /></g>
+      </g>
+      <path id="f04-reservoir-outline" class="f04-reservoir-outline" d="M110 20 C 40 120, 20 300, 60 540 L 360 540 C 400 300, 380 120, 310 20 Z" />
+    </svg>
+    <div class="f04-reservoir-side" id="f04-reservoir-side">
+      <div class="f04-reservoir-tag f04-reservoir-mono" id="f04-reservoir-tag">Réserve d’eau</div>
+      <div class="f04-reservoir-fig" id="f04-reservoir-fig"><span id="f04-reservoir-num">0</span></div>
+      <div class="f04-reservoir-unit" id="f04-reservoir-unit">litres</div>
+      <div class="f04-reservoir-note f04-reservoir-mono" id="f04-reservoir-note">Saison des pluies → saison sèche</div>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#f04-reservoir-topbar", { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0);
+
+  tl.fromTo("#f04-reservoir-stage", { scale: 1 }, { scale: 1.03, duration: 6, ease: "none", transformOrigin: "50% 50%" }, 0);
+  tl.fromTo("#f04-reservoir-outline", { strokeDashoffset: 1500 }, { strokeDashoffset: 0, duration: 1.5, ease: "power2.inOut" }, 0.2);
+  tl.fromTo("#f04-reservoir-tag", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.5);
+  tl.fromTo("#f04-reservoir-water", { y: 560 }, { y: 80, duration: 2.6, ease: "power1.inOut" }, 1.8);
+  tl.fromTo("#f04-reservoir-water", { x: 0 }, { x: -105, duration: 4.2, ease: "none", immediateRender: false }, 1.8);
+  tl.fromTo("#f04-reservoir-fig", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.7);
+  const c = { v: 0 };
+  const num = document.getElementById("f04-reservoir-num");
+  tl.fromTo(c, { v: 0 }, { v: 120000, duration: 2.4, ease: "power2.out", onUpdate: () => { num.textContent = Math.round(c.v / 100 * 100).toLocaleString("fr-FR").replace(/\s/g, "\u202f"); } }, 2.0);
+  tl.fromTo("#f04-reservoir-unit", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 3.6);
+  tl.fromTo("#f04-reservoir-note", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.5, ease: "power2.out" }, 4.4);
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines["04-reservoir"] = tl;
+})();
+</script>
+</template>

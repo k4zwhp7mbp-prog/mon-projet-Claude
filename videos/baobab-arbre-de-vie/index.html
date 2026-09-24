@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #000;
+      }
+      #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #efe7d4;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="30"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div
+        id="el-01-accroche"
+        class="scene"
+        data-composition-id="01-accroche"
+        data-composition-src="compositions/frames/01-accroche.html"
+        data-start="0"
+        data-duration="4"
+        data-track-index="0"
+      ></div>
+      <audio
+        id="el-01-accroche-voice"
+        src="assets/voice/01.wav"
+        data-start="0"
+        data-duration="3.5"
+        data-track-index="10"
+        data-volume="1"
+      ></audio>
+
+      <div
+        id="el-02-baobab"
+        class="scene"
+        data-composition-id="02-baobab"
+        data-composition-src="compositions/frames/02-baobab.html"
+        data-start="3.5"
+        data-duration="5"
+        data-track-index="1"
+      ></div>
+      <audio
+        id="el-02-baobab-voice"
+        src="assets/voice/02.wav"
+        data-start="3.5"
+        data-duration="4.5"
+        data-track-index="10"
+        data-volume="1"
+      ></audio>
+
+      <div
+        id="el-03-longevite"
+        class="scene"
+        data-composition-id="03-longevite"
+        data-composition-src="compositions/frames/03-longevite.html"
+        data-start="8"
+        data-duration="5"
+        data-track-index="0"
+      ></div>
+      <audio
+        id="el-03-longevite-voice"
+        src="assets/voice/03.wav"
+        data-start="8"
+        data-duration="4.5"
+        data-track-index="10"
+        data-volume="1"
+      ></audio>
+
+      <div
+        id="el-04-reservoir"
+        class="scene"
+        data-composition-id="04-reservoir"
+        data-composition-src="compositions/frames/04-reservoir.html"
+        data-start="12.5"
+        data-duration="6.5"
+        data-track-index="1"
+      ></div>
+      <audio
+        id="el-04-reservoir-voice"
+        src="assets/voice/04.wav"
+        data-start="12.5"
+        data-duration="6"
+        data-track-index="10"
+        data-volume="1"
+      ></audio>
+
+      <div
+        id="el-05-nourriture"
+        class="scene"
+        data-composition-id="05-nourriture"
+        data-composition-src="compositions/frames/05-nourriture.html"
+        data-start="18.5"
+        data-duration="7"
+        data-track-index="0"
+      ></div>
+      <audio
+        id="el-05-nourriture-voice"
+        src="assets/voice/05.wav"
+        data-start="18.5"
+        data-duration="6.5"
+        data-track-index="10"
+        data-volume="1"
+      ></audio>
+
+      <div
+        id="el-06-lecon"
+        class="scene"
+        data-composition-id="06-lecon"
+        data-composition-src="compositions/frames/06-lecon.html"
+        data-start="25"
+        data-duration="5"
+        data-track-index="1"
+      ></div>
+      <audio
+        id="el-06-lecon-voice"
+        src="assets/voice/06.wav"
+        data-start="25"
+        data-duration="5"
+        data-track-index="10"
+        data-volume="1"
+      ></audio>
+
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+      // ── frame transitions (injected by transitions.mjs) ──
+      (function () { var tl = window.__timelines["main"];
+        tl.to("#el-01-accroche", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 3.5);
+        tl.fromTo("#el-02-baobab", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 3.5);
+        tl.addLabel("hf:transition:01-accroche:02-baobab:crossfade", 3.5);
+        tl.to("#el-02-baobab", { x: -1920, duration: 0.5, ease: "power3.inOut" }, 8);
+        tl.fromTo("#el-03-longevite", { x: 1920, opacity: 1 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }, 8);
+        tl.addLabel("hf:transition:02-baobab:03-longevite:push-slide", 8);
+        tl.to("#el-03-longevite", { x: -1920, duration: 0.5, ease: "power3.inOut" }, 12.5);
+        tl.fromTo("#el-04-reservoir", { x: 1920, opacity: 1 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }, 12.5);
+        tl.addLabel("hf:transition:03-longevite:04-reservoir:push-slide", 12.5);
+        tl.to("#el-04-reservoir", { x: -1920, duration: 0.5, ease: "power3.inOut" }, 18.5);
+        tl.fromTo("#el-05-nourriture", { x: 1920, opacity: 1 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }, 18.5);
+        tl.addLabel("hf:transition:04-reservoir:05-nourriture:push-slide", 18.5);
+        tl.to("#el-05-nourriture", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 25);
+        tl.fromTo("#el-06-lecon", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 25);
+        tl.addLabel("hf:transition:05-nourriture:06-lecon:crossfade", 25);
+        tl.to({}, { duration: 30 }, 0); // full-span anchor — main.duration() == composition total (Studio master duration)
+      })();
+    </script>
+  </body>
+</html>
