@@ -1,5 +1,11 @@
 # HyperFrames Composition Project
 
+## Environnement de ce dépôt (à lire en premier)
+
+- **Bibliothèques JS en local** : dans les sessions web, le réseau peut bloquer `cdn.jsdelivr.net`. GSAP est déjà fourni dans `assets/vendor/gsap.min.js` — référence-le avec `<script src="assets/vendor/gsap.min.js"></script>` (depuis une sous-composition, adapte le chemin relatif) au lieu d'une URL CDN. Pour toute autre bibliothèque (Lottie, Three.js, Anime.js…), télécharge-la depuis npm (`npm pack <pkg>@<version>`) dans `assets/vendor/` plutôt que de la charger depuis un CDN.
+- **Outils** : `.claude/hooks/session-start.sh` installe FFmpeg, Chrome headless, whisper.cpp, Kokoro TTS et précharge les modèles. Vérifier avec `npx hyperframes doctor`.
+- **Skills** : les skills HyperFrames (y compris les workflows `/product-launch-video`, `/faceless-explainer`, etc.) sont déjà dans `.claude/skills/` — pas besoin de les réinstaller.
+
 ## Skills — USE THESE FIRST
 
 **Always invoke the relevant skill before writing or modifying compositions.** Skills encode framework-specific patterns (e.g., `window.__timelines` registration, `data-*` attribute semantics, shader-compatible CSS rules) that are NOT in generic web docs. Skipping them produces broken compositions.
