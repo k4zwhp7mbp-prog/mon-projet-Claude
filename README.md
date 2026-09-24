@@ -13,12 +13,12 @@ Projet vidéo [HyperFrames](https://hyperframes.heygen.com) (HeyGen) : des compo
 
 ## Prérequis
 
-Dans Claude Code on the web, tout est installé automatiquement au démarrage de la session (FFmpeg, Chrome headless, whisper.cpp, Kokoro TTS, modèles). En local :
+Dans Claude Code on the web, tout est installé automatiquement au démarrage de la session (FFmpeg, Chrome headless, whisper.cpp, Kokoro TTS, MusicGen, démon Docker, modèles). En local :
 
 - Node.js 22+
 - FFmpeg (`sudo apt-get install -y ffmpeg` ou `brew install ffmpeg`)
 - Chrome headless : `npx hyperframes browser ensure`
-- Optionnel : `pip install kokoro-onnx soundfile` (voix off locale), whisper.cpp (sous-titres, compilé automatiquement au premier usage si `cmake` est présent)
+- Optionnel : `pip install kokoro-onnx soundfile` (voix off locale), `pip install transformers torch soundfile numpy` (musique MusicGen), whisper.cpp (sous-titres, compilé automatiquement au premier usage si `cmake` est présent)
 
 Vérifier l'environnement : `npx hyperframes doctor`
 
@@ -28,6 +28,7 @@ Pour que tout fonctionne, l'environnement doit autoriser ces domaines (Environne
 
 - `huggingface.co` — modèles Whisper (transcription / sous-titres)
 - `cdn.jsdelivr.net` — bibliothèques chargées par les blocs du registry HyperFrames
+- `deb.debian.org` — construction de l'image Docker (`npm run render -- --docker` uniquement ; le rendu normal n'en a pas besoin)
 
 ## Commandes
 

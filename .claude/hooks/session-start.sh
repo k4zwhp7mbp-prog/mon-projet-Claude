@@ -42,7 +42,21 @@ if ! python3 -c "import kokoro_onnx, soundfile" >/dev/null 2>&1; then
   pip install -q kokoro-onnx soundfile
 fi
 
-# 5. Préchargement des modèles (voix Kokoro depuis GitHub, Whisper depuis huggingface.co).
+# 5. MusicGen (musique de fond générée localement) — PyTorch, ~3 Go la première fois
+if ! python3 -c "import transformers, torch, soundfile, numpy" >/dev/null 2>&1; then
+  log "Installation de MusicGen (transformers + torch)..."
+  pip install -q transformers torch soundfile numpy
+fi
+
+# 6. Démon Docker (rendus « hyperframes render --docker »). Non bloquant.
+if command -v dockerd >/dev/null 2>&1 && ! docker info >/dev/null 2>&1; then
+  log "Démarrage de Docker..."
+  (nohup dockerd >/tmp/dockerd.log 2>&1 &)
+  for _ in $(seq 1 20); do docker info >/dev/null 2>&1 && break; sleep 1; done
+  docker info >/dev/null 2>&1 || log "Docker n'a pas démarré (voir /tmp/dockerd.log)"
+fi
+
+# 7. Préchargement des modèles (voix Kokoro depuis GitHub, Whisper depuis huggingface.co).
 #    Non bloquant : si le réseau de l'environnement refuse l'hôte, ils seront retentés au premier usage.
 TTS_DIR="$HOME/.cache/hyperframes/tts"
 if [ ! -f "$TTS_DIR/models/kokoro-v1.0.onnx" ] || [ ! -f "$TTS_DIR/voices/voices-v1.0.bin" ]; then

@@ -3,7 +3,7 @@
 ## Environnement de ce dépôt (à lire en premier)
 
 - **Bibliothèques JS en local** : dans les sessions web, le réseau peut bloquer `cdn.jsdelivr.net`. GSAP est déjà fourni dans `assets/vendor/gsap.min.js` — référence-le avec `<script src="assets/vendor/gsap.min.js"></script>` (depuis une sous-composition, adapte le chemin relatif) au lieu d'une URL CDN. Pour toute autre bibliothèque (Lottie, Three.js, Anime.js…), télécharge-la depuis npm (`npm pack <pkg>@<version>`) dans `assets/vendor/` plutôt que de la charger depuis un CDN.
-- **Outils** : `.claude/hooks/session-start.sh` installe FFmpeg, Chrome headless, whisper.cpp, Kokoro TTS et précharge les modèles. Vérifier avec `npx hyperframes doctor`.
+- **Outils** : `.claude/hooks/session-start.sh` installe FFmpeg, Chrome headless, whisper.cpp, Kokoro TTS, MusicGen, démarre Docker et précharge les modèles. Utiliser le rendu local (`npm run render`), pas `--docker`. Vérifier avec `npx hyperframes doctor`.
 - **Skills** : les skills HyperFrames (y compris les workflows `/product-launch-video`, `/faceless-explainer`, etc.) sont déjà dans `.claude/skills/` — pas besoin de les réinstaller.
 
 ## Skills — USE THESE FIRST
