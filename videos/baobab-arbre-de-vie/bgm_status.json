@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-10-06T16:28:28.084Z",
+  "enabled": true,
+  "provider": "musicgen",
+  "mode": "detached-seed-loop",
+  "path": "assets/bgm/track.wav",
+  "log": "/home/user/mon-projet-Claude/videos/baobab-arbre-de-vie/assets/bgm/bgm-1791303778943.log",
+  "pid": 3091,
+  "target_duration_s": 30,
+  "seed_duration_s": 28,
+  "loop_count": 2,
+  "timeout_ms": 120000,
+  "status": "ready",
+  "ready": true,
+  "waited_ms": 0,
+  "size_bytes": 1920044,
+  "message": "BGM ready at assets/bgm/track.wav."
+}

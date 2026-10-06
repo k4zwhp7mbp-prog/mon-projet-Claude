@@ -2,3 +2,9 @@ node_modules/
 renders/
 .DS_Store
 snapshots/
+
+# Vidéo finale de chaque projet : versionnée pour être téléchargeable
+!videos/*/renders/
+videos/*/renders/*
+!videos/*/renders/video.mp4
+*.log

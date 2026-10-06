@@ -28,7 +28,9 @@
     }
   ],
   "bgm": {
-    "mode": "none"
+    "mode": "generate",
+    "prompt": "warm gentle african kalimba melody with soft hand percussion and light acoustic guitar, calm hopeful nature documentary underscore, no vocals",
+    "query": "warm african kalimba documentary"
   },
   "voice": "ff_siwis"
 }
