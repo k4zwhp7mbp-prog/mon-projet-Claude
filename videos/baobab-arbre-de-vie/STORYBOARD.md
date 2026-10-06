@@ -6,7 +6,7 @@ arc: Accroche → Nom de l'idée → Longévité → Réservoir d'eau → Nourri
 audience: grand public francophone, curieux de nature et d'Afrique
 mode: autonomous
 structure: listicle
-music: none
+music: warm african kalimba documentary underscore
 ---
 
 ## Frame 1 — Accroche

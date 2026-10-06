@@ -1,0 +1,589 @@
+{
+  "total_duration_s": 30,
+  "width": 1920,
+  "height": 1080,
+  "groups": [
+    {
+      "id": "caption-group-0",
+      "frame": 1,
+      "start": 0,
+      "end": 1.03,
+      "text": "Deux mille ans…",
+      "words": [
+        {
+          "id": "caption-word-0-0",
+          "text": "Deux",
+          "start": 0,
+          "end": 0.475
+        },
+        {
+          "id": "caption-word-0-1",
+          "text": "mille",
+          "start": 0.475,
+          "end": 0.792
+        },
+        {
+          "id": "caption-word-0-2",
+          "text": "ans…",
+          "start": 0.792,
+          "end": 1.03
+        }
+      ]
+    },
+    {
+      "id": "caption-group-1",
+      "frame": 1,
+      "start": 1.03,
+      "end": 1.173,
+      "text": "et il",
+      "words": [
+        {
+          "id": "caption-word-1-0",
+          "text": "et",
+          "start": 1.03,
+          "end": 1.11
+        },
+        {
+          "id": "caption-word-1-1",
+          "text": "il",
+          "start": 1.08,
+          "end": 1.173
+        }
+      ]
+    },
+    {
+      "id": "caption-group-2",
+      "frame": 1,
+      "start": 1.173,
+      "end": 2.18,
+      "text": "est toujours debout.",
+      "words": [
+        {
+          "id": "caption-word-2-0",
+          "text": "est",
+          "start": 1.173,
+          "end": 1.325
+        },
+        {
+          "id": "caption-word-2-1",
+          "text": "toujours",
+          "start": 1.325,
+          "end": 1.709
+        },
+        {
+          "id": "caption-word-2-2",
+          "text": "debout.",
+          "start": 1.709,
+          "end": 2.06
+        }
+      ]
+    },
+    {
+      "id": "caption-group-3",
+      "frame": 2,
+      "start": 3.76,
+      "end": 5.51,
+      "text": "Voici le baobab,",
+      "words": [
+        {
+          "id": "caption-word-3-0",
+          "text": "Voici",
+          "start": 3.76,
+          "end": 4.15
+        },
+        {
+          "id": "caption-word-3-1",
+          "text": "le",
+          "start": 4.15,
+          "end": 4.41
+        },
+        {
+          "id": "caption-word-3-2",
+          "text": "baobab,",
+          "start": 4.41,
+          "end": 5.51
+        }
+      ]
+    },
+    {
+      "id": "caption-group-4",
+      "frame": 2,
+      "start": 5.51,
+      "end": 5.87,
+      "text": "l'arbre de",
+      "words": [
+        {
+          "id": "caption-word-4-0",
+          "text": "l'arbre",
+          "start": 5.51,
+          "end": 5.8
+        },
+        {
+          "id": "caption-word-4-1",
+          "text": "de",
+          "start": 5.8,
+          "end": 5.88
+        }
+      ]
+    },
+    {
+      "id": "caption-group-5",
+      "frame": 2,
+      "start": 5.87,
+      "end": 6.73,
+      "text": "vie de l'Afrique.",
+      "words": [
+        {
+          "id": "caption-word-5-0",
+          "text": "vie",
+          "start": 5.87,
+          "end": 6
+        },
+        {
+          "id": "caption-word-5-1",
+          "text": "de",
+          "start": 6,
+          "end": 6.08
+        },
+        {
+          "id": "caption-word-5-2",
+          "text": "l'Afrique.",
+          "start": 6.07,
+          "end": 6.61
+        }
+      ]
+    },
+    {
+      "id": "caption-group-6",
+      "frame": 3,
+      "start": 8,
+      "end": 8.323,
+      "text": "Il peut",
+      "words": [
+        {
+          "id": "caption-word-6-0",
+          "text": "Il",
+          "start": 8,
+          "end": 8.08
+        },
+        {
+          "id": "caption-word-6-1",
+          "text": "peut",
+          "start": 8.06,
+          "end": 8.323
+        }
+      ]
+    },
+    {
+      "id": "caption-group-7",
+      "frame": 3,
+      "start": 8.323,
+      "end": 8.765,
+      "text": "vivre plus",
+      "words": [
+        {
+          "id": "caption-word-7-0",
+          "text": "vivre",
+          "start": 8.323,
+          "end": 8.51
+        },
+        {
+          "id": "caption-word-7-1",
+          "text": "plus",
+          "start": 8.51,
+          "end": 8.765
+        }
+      ]
+    },
+    {
+      "id": "caption-group-8",
+      "frame": 3,
+      "start": 8.765,
+      "end": 9.79,
+      "text": "de deux mille",
+      "words": [
+        {
+          "id": "caption-word-8-0",
+          "text": "de",
+          "start": 8.765,
+          "end": 8.875
+        },
+        {
+          "id": "caption-word-8-1",
+          "text": "deux",
+          "start": 8.875,
+          "end": 9.08
+        },
+        {
+          "id": "caption-word-8-2",
+          "text": "mille",
+          "start": 9.08,
+          "end": 9.79
+        }
+      ]
+    },
+    {
+      "id": "caption-group-9",
+      "frame": 3,
+      "start": 9.79,
+      "end": 10.37,
+      "text": "ans.",
+      "words": [
+        {
+          "id": "caption-word-9-0",
+          "text": "ans.",
+          "start": 9.79,
+          "end": 10.25
+        }
+      ]
+    },
+    {
+      "id": "caption-group-10",
+      "frame": 4,
+      "start": 12.77,
+      "end": 13.058,
+      "text": "Son tronc",
+      "words": [
+        {
+          "id": "caption-word-10-0",
+          "text": "Son",
+          "start": 12.77,
+          "end": 12.85
+        },
+        {
+          "id": "caption-word-10-1",
+          "text": "tronc",
+          "start": 12.85,
+          "end": 13.058
+        }
+      ]
+    },
+    {
+      "id": "caption-group-11",
+      "frame": 4,
+      "start": 13.058,
+      "end": 14.177,
+      "text": "est un réservoir :",
+      "words": [
+        {
+          "id": "caption-word-11-0",
+          "text": "est",
+          "start": 13.058,
+          "end": 13.337
+        },
+        {
+          "id": "caption-word-11-1",
+          "text": "un",
+          "start": 13.337,
+          "end": 13.417
+        },
+        {
+          "id": "caption-word-11-2",
+          "text": "réservoir :",
+          "start": 13.413,
+          "end": 14.177
+        }
+      ]
+    },
+    {
+      "id": "caption-group-12",
+      "frame": 4,
+      "start": 14.177,
+      "end": 15.36,
+      "text": "jusqu'à cent vingt",
+      "words": [
+        {
+          "id": "caption-word-12-0",
+          "text": "jusqu'à",
+          "start": 14.177,
+          "end": 14.763
+        },
+        {
+          "id": "caption-word-12-1",
+          "text": "cent",
+          "start": 14.763,
+          "end": 14.843
+        },
+        {
+          "id": "caption-word-12-2",
+          "text": "vingt",
+          "start": 14.836,
+          "end": 15.36
+        }
+      ]
+    },
+    {
+      "id": "caption-group-13",
+      "frame": 4,
+      "start": 15.36,
+      "end": 16.62,
+      "text": "mille litres d'eau.",
+      "words": [
+        {
+          "id": "caption-word-13-0",
+          "text": "mille",
+          "start": 15.36,
+          "end": 15.92
+        },
+        {
+          "id": "caption-word-13-1",
+          "text": "litres",
+          "start": 15.92,
+          "end": 16.17
+        },
+        {
+          "id": "caption-word-13-2",
+          "text": "d'eau.",
+          "start": 16.17,
+          "end": 16.5
+        }
+      ]
+    },
+    {
+      "id": "caption-group-14",
+      "frame": 5,
+      "start": 18.74,
+      "end": 19.215,
+      "text": "Son fruit,",
+      "words": [
+        {
+          "id": "caption-word-14-0",
+          "text": "Son",
+          "start": 18.74,
+          "end": 18.84
+        },
+        {
+          "id": "caption-word-14-1",
+          "text": "fruit,",
+          "start": 18.84,
+          "end": 19.215
+        }
+      ]
+    },
+    {
+      "id": "caption-group-15",
+      "frame": 5,
+      "start": 19.215,
+      "end": 19.68,
+      "text": "le pain",
+      "words": [
+        {
+          "id": "caption-word-15-0",
+          "text": "le",
+          "start": 19.215,
+          "end": 19.36
+        },
+        {
+          "id": "caption-word-15-1",
+          "text": "pain",
+          "start": 19.36,
+          "end": 19.68
+        }
+      ]
+    },
+    {
+      "id": "caption-group-16",
+      "frame": 5,
+      "start": 19.68,
+      "end": 20.388,
+      "text": "de singe,",
+      "words": [
+        {
+          "id": "caption-word-16-0",
+          "text": "de",
+          "start": 19.68,
+          "end": 19.835
+        },
+        {
+          "id": "caption-word-16-1",
+          "text": "singe,",
+          "start": 19.835,
+          "end": 20.388
+        }
+      ]
+    },
+    {
+      "id": "caption-group-17",
+      "frame": 5,
+      "start": 20.388,
+      "end": 21.078,
+      "text": "est riche",
+      "words": [
+        {
+          "id": "caption-word-17-0",
+          "text": "est",
+          "start": 20.388,
+          "end": 20.733
+        },
+        {
+          "id": "caption-word-17-1",
+          "text": "riche",
+          "start": 20.733,
+          "end": 21.078
+        }
+      ]
+    },
+    {
+      "id": "caption-group-18",
+      "frame": 5,
+      "start": 21.078,
+      "end": 21.889,
+      "text": "en vitamine",
+      "words": [
+        {
+          "id": "caption-word-18-0",
+          "text": "en",
+          "start": 21.078,
+          "end": 21.24
+        },
+        {
+          "id": "caption-word-18-1",
+          "text": "vitamine",
+          "start": 21.24,
+          "end": 21.889
+        }
+      ]
+    },
+    {
+      "id": "caption-group-19",
+      "frame": 5,
+      "start": 21.889,
+      "end": 22.043,
+      "text": "C,",
+      "words": [
+        {
+          "id": "caption-word-19-0",
+          "text": "C,",
+          "start": 21.889,
+          "end": 22.043
+        }
+      ]
+    },
+    {
+      "id": "caption-group-20",
+      "frame": 5,
+      "start": 22.043,
+      "end": 22.33,
+      "text": "et ses",
+      "words": [
+        {
+          "id": "caption-word-20-0",
+          "text": "et",
+          "start": 22.043,
+          "end": 22.19
+        },
+        {
+          "id": "caption-word-20-1",
+          "text": "ses",
+          "start": 22.19,
+          "end": 22.33
+        }
+      ]
+    },
+    {
+      "id": "caption-group-21",
+      "frame": 5,
+      "start": 22.33,
+      "end": 23.42,
+      "text": "feuilles se mangent.",
+      "words": [
+        {
+          "id": "caption-word-21-0",
+          "text": "feuilles",
+          "start": 22.33,
+          "end": 22.74
+        },
+        {
+          "id": "caption-word-21-1",
+          "text": "se",
+          "start": 22.74,
+          "end": 22.82
+        },
+        {
+          "id": "caption-word-21-2",
+          "text": "mangent.",
+          "start": 22.82,
+          "end": 23.3
+        }
+      ]
+    },
+    {
+      "id": "caption-group-22",
+      "frame": 6,
+      "start": 25,
+      "end": 25.83,
+      "text": "Il nourrit,",
+      "words": [
+        {
+          "id": "caption-word-22-0",
+          "text": "Il",
+          "start": 25,
+          "end": 25.38
+        },
+        {
+          "id": "caption-word-22-1",
+          "text": "nourrit,",
+          "start": 25.38,
+          "end": 25.83
+        }
+      ]
+    },
+    {
+      "id": "caption-group-23",
+      "frame": 6,
+      "start": 25.83,
+      "end": 26.8,
+      "text": "il abreuve,",
+      "words": [
+        {
+          "id": "caption-word-23-0",
+          "text": "il",
+          "start": 25.83,
+          "end": 25.98
+        },
+        {
+          "id": "caption-word-23-1",
+          "text": "abreuve,",
+          "start": 25.98,
+          "end": 26.8
+        }
+      ]
+    },
+    {
+      "id": "caption-group-24",
+      "frame": 6,
+      "start": 26.8,
+      "end": 27.59,
+      "text": "il rassemble.",
+      "words": [
+        {
+          "id": "caption-word-24-0",
+          "text": "il",
+          "start": 26.8,
+          "end": 26.88
+        },
+        {
+          "id": "caption-word-24-1",
+          "text": "rassemble.",
+          "start": 26.83,
+          "end": 27.59
+        }
+      ]
+    },
+    {
+      "id": "caption-group-25",
+      "frame": 6,
+      "start": 27.59,
+      "end": 28.62,
+      "text": "Protégeons-le.",
+      "words": [
+        {
+          "id": "caption-word-25-0",
+          "text": "Protégeons-le.",
+          "start": 27.59,
+          "end": 28.5
+        }
+      ]
+    }
+  ]
+}

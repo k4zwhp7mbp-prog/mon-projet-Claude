@@ -27,12 +27,20 @@ $HF browser ensure >/dev/null 2>&1
 
 # 3. whisper.cpp (transcription / sous-titres) — compilé là où HyperFrames le cherche
 WHISPER_DIR="$HOME/.cache/hyperframes/whisper/whisper.cpp"
+# Un binaire compilé sur une autre machine peut planter (« Illegal instruction ») : on le teste.
+if [ -x "$WHISPER_DIR/build/bin/whisper-cli" ] && ! "$WHISPER_DIR/build/bin/whisper-cli" --help >/dev/null 2>&1; then
+  log "whisper.cpp incompatible avec ce processeur : recompilation..."
+  rm -rf "$WHISPER_DIR/build"
+fi
 if ! command -v whisper-cli >/dev/null 2>&1 && [ ! -x "$WHISPER_DIR/build/bin/whisper-cli" ]; then
   log "Compilation de whisper.cpp..."
-  rm -rf "$WHISPER_DIR"
-  mkdir -p "$(dirname "$WHISPER_DIR")"
-  git clone --depth 1 -q https://github.com/ggml-org/whisper.cpp.git "$WHISPER_DIR"
-  cmake -S "$WHISPER_DIR" -B "$WHISPER_DIR/build" -DCMAKE_BUILD_TYPE=Release >/dev/null
+  if [ ! -f "$WHISPER_DIR/CMakeLists.txt" ]; then
+    rm -rf "$WHISPER_DIR"
+    mkdir -p "$(dirname "$WHISPER_DIR")"
+    git clone --depth 1 -q https://github.com/ggml-org/whisper.cpp.git "$WHISPER_DIR"
+  fi
+  # GGML_NATIVE=OFF : binaire portable, la session peut changer de machine.
+  cmake -S "$WHISPER_DIR" -B "$WHISPER_DIR/build" -DCMAKE_BUILD_TYPE=Release -DGGML_NATIVE=OFF >/dev/null
   cmake --build "$WHISPER_DIR/build" --config Release -j"$(nproc)" --target whisper-cli >/dev/null
 fi
 

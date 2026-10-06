@@ -1,43 +1,354 @@
 {
-  "bgm": null,
-  "bgm_pending": false,
+  "tts_provider": null,
+  "voice_id": null,
+  "bgm": {
+    "path": "assets/bgm/track.wav",
+    "volume": 0.12,
+    "mode": "detached-seed-loop",
+    "duration_s": null
+  },
+  "bgm_pending": true,
+  "bgm_provider": "musicgen",
+  "bgm_pid": 3091,
+  "bgm_log": "/home/user/mon-projet-Claude/videos/baobab-arbre-de-vie/assets/bgm/bgm-1791303778943.log",
+  "bgm_mode": "detached-seed-loop",
+  "bgm_target_duration_s": 30,
+  "bgm_seed_duration_s": 28,
+  "bgm_loop_count": 2,
   "voices": [
     {
       "frame": 1,
       "path": "assets/voice/01.wav",
       "duration_s": 3.5,
-      "words": []
+      "words": [
+        {
+          "text": "Deux",
+          "start": 0,
+          "end": 0.475
+        },
+        {
+          "text": "mille",
+          "start": 0.475,
+          "end": 0.792
+        },
+        {
+          "text": "ans…",
+          "start": 0.792,
+          "end": 1.03
+        },
+        {
+          "text": "et",
+          "start": 1.03,
+          "end": 1.11
+        },
+        {
+          "text": "il",
+          "start": 1.08,
+          "end": 1.173
+        },
+        {
+          "text": "est",
+          "start": 1.173,
+          "end": 1.325
+        },
+        {
+          "text": "toujours",
+          "start": 1.325,
+          "end": 1.709
+        },
+        {
+          "text": "debout.",
+          "start": 1.709,
+          "end": 2.06
+        }
+      ]
     },
     {
       "frame": 2,
       "path": "assets/voice/02.wav",
       "duration_s": 4.5,
-      "words": []
+      "words": [
+        {
+          "text": "Voici",
+          "start": 0.26,
+          "end": 0.65
+        },
+        {
+          "text": "le",
+          "start": 0.65,
+          "end": 0.91
+        },
+        {
+          "text": "baobab,",
+          "start": 0.91,
+          "end": 2.01
+        },
+        {
+          "text": "l'arbre",
+          "start": 2.01,
+          "end": 2.3
+        },
+        {
+          "text": "de",
+          "start": 2.3,
+          "end": 2.38
+        },
+        {
+          "text": "vie",
+          "start": 2.37,
+          "end": 2.5
+        },
+        {
+          "text": "de",
+          "start": 2.5,
+          "end": 2.58
+        },
+        {
+          "text": "l'Afrique.",
+          "start": 2.57,
+          "end": 3.11
+        }
+      ]
     },
     {
       "frame": 3,
       "path": "assets/voice/03.wav",
       "duration_s": 4.5,
-      "words": []
+      "words": [
+        {
+          "text": "Il",
+          "start": 0,
+          "end": 0.08
+        },
+        {
+          "text": "peut",
+          "start": 0.06,
+          "end": 0.323
+        },
+        {
+          "text": "vivre",
+          "start": 0.323,
+          "end": 0.51
+        },
+        {
+          "text": "plus",
+          "start": 0.51,
+          "end": 0.765
+        },
+        {
+          "text": "de",
+          "start": 0.765,
+          "end": 0.875
+        },
+        {
+          "text": "deux",
+          "start": 0.875,
+          "end": 1.08
+        },
+        {
+          "text": "mille",
+          "start": 1.08,
+          "end": 1.79
+        },
+        {
+          "text": "ans.",
+          "start": 1.79,
+          "end": 2.25
+        }
+      ]
     },
     {
       "frame": 4,
       "path": "assets/voice/04.wav",
-      "duration_s": 6.0,
-      "words": []
+      "duration_s": 6,
+      "words": [
+        {
+          "text": "Son",
+          "start": 0.27,
+          "end": 0.35
+        },
+        {
+          "text": "tronc",
+          "start": 0.35,
+          "end": 0.558
+        },
+        {
+          "text": "est",
+          "start": 0.558,
+          "end": 0.837
+        },
+        {
+          "text": "un",
+          "start": 0.837,
+          "end": 0.917
+        },
+        {
+          "text": "réservoir :",
+          "start": 0.913,
+          "end": 1.677
+        },
+        {
+          "text": "jusqu'à",
+          "start": 1.677,
+          "end": 2.263
+        },
+        {
+          "text": "cent",
+          "start": 2.263,
+          "end": 2.343
+        },
+        {
+          "text": "vingt",
+          "start": 2.336,
+          "end": 2.86
+        },
+        {
+          "text": "mille",
+          "start": 2.86,
+          "end": 3.42
+        },
+        {
+          "text": "litres",
+          "start": 3.42,
+          "end": 3.67
+        },
+        {
+          "text": "d'eau.",
+          "start": 3.67,
+          "end": 4
+        }
+      ]
     },
     {
       "frame": 5,
       "path": "assets/voice/05.wav",
       "duration_s": 6.5,
-      "words": []
+      "words": [
+        {
+          "text": "Son",
+          "start": 0.24,
+          "end": 0.34
+        },
+        {
+          "text": "fruit,",
+          "start": 0.34,
+          "end": 0.715
+        },
+        {
+          "text": "le",
+          "start": 0.715,
+          "end": 0.86
+        },
+        {
+          "text": "pain",
+          "start": 0.86,
+          "end": 1.18
+        },
+        {
+          "text": "de",
+          "start": 1.18,
+          "end": 1.335
+        },
+        {
+          "text": "singe,",
+          "start": 1.335,
+          "end": 1.888
+        },
+        {
+          "text": "est",
+          "start": 1.888,
+          "end": 2.233
+        },
+        {
+          "text": "riche",
+          "start": 2.233,
+          "end": 2.578
+        },
+        {
+          "text": "en",
+          "start": 2.578,
+          "end": 2.74
+        },
+        {
+          "text": "vitamine",
+          "start": 2.74,
+          "end": 3.389
+        },
+        {
+          "text": "C,",
+          "start": 3.389,
+          "end": 3.543
+        },
+        {
+          "text": "et",
+          "start": 3.543,
+          "end": 3.69
+        },
+        {
+          "text": "ses",
+          "start": 3.69,
+          "end": 3.83
+        },
+        {
+          "text": "feuilles",
+          "start": 3.83,
+          "end": 4.24
+        },
+        {
+          "text": "se",
+          "start": 4.24,
+          "end": 4.32
+        },
+        {
+          "text": "mangent.",
+          "start": 4.32,
+          "end": 4.8
+        }
+      ]
     },
     {
       "frame": 6,
       "path": "assets/voice/06.wav",
-      "duration_s": 5.0,
-      "words": []
+      "duration_s": 5,
+      "words": [
+        {
+          "text": "Il",
+          "start": 0,
+          "end": 0.38
+        },
+        {
+          "text": "nourrit,",
+          "start": 0.38,
+          "end": 0.83
+        },
+        {
+          "text": "il",
+          "start": 0.83,
+          "end": 0.98
+        },
+        {
+          "text": "abreuve,",
+          "start": 0.98,
+          "end": 1.8
+        },
+        {
+          "text": "il",
+          "start": 1.8,
+          "end": 1.88
+        },
+        {
+          "text": "rassemble.",
+          "start": 1.83,
+          "end": 2.59
+        },
+        {
+          "text": "Protégeons-le.",
+          "start": 2.59,
+          "end": 3.5
+        }
+      ]
     }
   ],
-  "sfx": []
+  "sfx": [],
+  "total_duration_s": 30
 }
