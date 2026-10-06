@@ -1,0 +1,55 @@
+<template>
+<style>
+
+  @font-face { font-family: "Source Serif 4"; src: url("assets/fonts/source-serif-4-latin-opsz-normal.woff2") format("woff2"); font-weight: 200 900; font-style: normal; }
+  @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; }
+  #root { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; container-type: size; font-family: "Source Serif 4", serif; font-optical-sizing: auto; }
+  #root .f05-nourriture-bg { position: absolute; inset: 0; }
+  #root .f05-nourriture-topbar { position: absolute; left: 5cqw; right: 5cqw; top: 3.4cqw; display: flex; justify-content: space-between; align-items: center; font-family: "JetBrains Mono", monospace; font-weight: 500; font-size: 26px; letter-spacing: 0.18em; text-transform: uppercase; padding-bottom: 18px; border-bottom: 2px solid currentColor; }
+  #root .f05-nourriture-mono { font-family: "JetBrains Mono", monospace; font-weight: 500; text-transform: uppercase; letter-spacing: 0.16em; }
+
+  #root .f05-nourriture-bg { background: #efe7d4; }
+  #root .f05-nourriture-topbar { color: #2e4a2a; }
+
+  #root .f05-nourriture-tag { position: absolute; left: 5cqw; top: 15cqh; font-size: 1.35cqw; color: #2e4a2a; padding-top: 1cqw; border-top: 2px solid #d27e96; }
+  #root .f05-nourriture-grid { position: absolute; left: 5cqw; right: 5cqw; top: 25cqh; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2cqw; }
+  #root .f05-nourriture-tile { height: 32cqw; border-radius: 6px; padding: 2.2cqw; display: flex; flex-direction: column; box-sizing: border-box; }
+  #root .f05-nourriture-green { background: #2e4a2a; color: #e89cb1; }
+  #root .f05-nourriture-pink { background: #e89cb1; color: #243a21; }
+  #root .f05-nourriture-cream { background: #e6dcc4; color: #2e4a2a; border: 2px solid #2e4a2a; }
+  #root .f05-nourriture-ord { font-size: 1.25cqw; }
+  #root .f05-nourriture-icon { height: 11cqw; display: flex; align-items: center; margin-top: 1.5cqw; }
+  #root .f05-nourriture-big { font-size: 9cqw; font-weight: 500; line-height: 1; font-style: italic; }
+  #root .f05-nourriture-title { font-size: 3.5cqw; font-weight: 500; line-height: 0.96; letter-spacing: -0.01em; margin-top: auto; }
+  #root .f05-nourriture-foot { font-size: 1.25cqw; margin-top: 1.4cqw; padding-top: 1cqw; border-top: 2px solid currentColor; }
+
+</style>
+<div id="root" data-composition-id="05-nourriture" data-start="0" data-duration="7" data-width="1920" data-height="1080">
+  <div class="f05-nourriture-bg clip" id="f05-nourriture-bg" data-start="0" data-duration="7" data-track-index="0"></div>
+  <div class="f05-nourriture-stage clip" id="f05-nourriture-stage" data-start="0" data-duration="7" data-track-index="1">
+    <div class="f05-nourriture-topbar" id="f05-nourriture-topbar"><span>Le baobab</span><span>05 / 06</span></div>
+
+    <div class="f05-nourriture-tag f05-nourriture-mono" id="f05-nourriture-tag">Se nourrir</div>
+    <div class="f05-nourriture-grid">
+      <div class="f05-nourriture-tile f05-nourriture-green" id="f05-nourriture-t1"><div class="f05-nourriture-mono f05-nourriture-ord">01</div><div class="f05-nourriture-icon"><svg width="150" height="110" viewBox="0 0 150 110"><ellipse cx="75" cy="60" rx="62" ry="38" fill="none" stroke="#efe7d4" stroke-width="5"/><path d="M75 22 L 80 4" stroke="#efe7d4" stroke-width="5" stroke-linecap="round"/></svg></div><div class="f05-nourriture-title">Pain de singe</div><div class="f05-nourriture-mono f05-nourriture-foot">Le fruit</div></div>
+      <div class="f05-nourriture-tile f05-nourriture-pink" id="f05-nourriture-t2"><div class="f05-nourriture-mono f05-nourriture-ord">02</div><div class="f05-nourriture-icon"><div class="f05-nourriture-big">C</div></div><div class="f05-nourriture-title">Vitamine C</div><div class="f05-nourriture-mono f05-nourriture-foot">La pulpe</div></div>
+      <div class="f05-nourriture-tile f05-nourriture-cream" id="f05-nourriture-t3"><div class="f05-nourriture-mono f05-nourriture-ord">03</div><div class="f05-nourriture-icon"><svg width="150" height="110" viewBox="0 0 150 110"><path d="M20 90 C 30 20, 110 10, 135 18 C 128 60, 80 100, 20 90 Z" fill="none" stroke="#2e4a2a" stroke-width="5" stroke-linejoin="round"/><path d="M20 90 L 110 35" stroke="#2e4a2a" stroke-width="4" stroke-linecap="round"/></svg></div><div class="f05-nourriture-title">Feuilles</div><div class="f05-nourriture-mono f05-nourriture-foot">Le légume</div></div>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#f05-nourriture-topbar", { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0);
+
+  tl.fromTo("#f05-nourriture-tag", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.1);
+  tl.fromTo("#f05-nourriture-t1", { opacity: 0, y: 120 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 0.3);
+  tl.fromTo("#f05-nourriture-t2", { opacity: 0, y: 120 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 2.0);
+  tl.fromTo("#f05-nourriture-t3", { opacity: 0, y: 120 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 3.5);
+  tl.fromTo(".f05-nourriture-grid", { scale: 1 }, { scale: 1.025, duration: 6.5, ease: "none", transformOrigin: "50% 40%" }, 0);
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines["05-nourriture"] = tl;
+})();
+</script>
+</template>

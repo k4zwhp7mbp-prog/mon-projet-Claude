@@ -1,0 +1,34 @@
+{
+  "provider": "auto",
+  "speed": 0.9,
+  "lines": [
+    {
+      "id": "01",
+      "text": "Deux mille ans… et il est toujours debout."
+    },
+    {
+      "id": "02",
+      "text": "Voici le baobab, l'arbre de vie de l'Afrique."
+    },
+    {
+      "id": "03",
+      "text": "Il peut vivre plus de deux mille ans."
+    },
+    {
+      "id": "04",
+      "text": "Son tronc est un réservoir : jusqu'à cent vingt mille litres d'eau."
+    },
+    {
+      "id": "05",
+      "text": "Son fruit, le pain de singe, est riche en vitamine C, et ses feuilles se mangent."
+    },
+    {
+      "id": "06",
+      "text": "Il nourrit, il abreuve, il rassemble. Protégeons-le."
+    }
+  ],
+  "bgm": {
+    "mode": "none"
+  },
+  "voice": "ff_siwis"
+}

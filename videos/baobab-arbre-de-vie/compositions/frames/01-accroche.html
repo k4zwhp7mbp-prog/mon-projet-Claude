@@ -1,0 +1,48 @@
+<template>
+<style>
+
+  @font-face { font-family: "Source Serif 4"; src: url("assets/fonts/source-serif-4-latin-opsz-normal.woff2") format("woff2"); font-weight: 200 900; font-style: normal; }
+  @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; }
+  #root { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; container-type: size; font-family: "Source Serif 4", serif; font-optical-sizing: auto; }
+  #root .f01-accroche-bg { position: absolute; inset: 0; }
+  #root .f01-accroche-topbar { position: absolute; left: 5cqw; right: 5cqw; top: 3.4cqw; display: flex; justify-content: space-between; align-items: center; font-family: "JetBrains Mono", monospace; font-weight: 500; font-size: 26px; letter-spacing: 0.18em; text-transform: uppercase; padding-bottom: 18px; border-bottom: 2px solid currentColor; }
+  #root .f01-accroche-mono { font-family: "JetBrains Mono", monospace; font-weight: 500; text-transform: uppercase; letter-spacing: 0.16em; }
+
+  #root .f01-accroche-bg { background: #efe7d4; }
+  #root .f01-accroche-topbar { color: #2e4a2a; }
+
+  #root .f01-accroche-wrap { position: absolute; left: 0; right: 0; top: 20cqh; display: flex; flex-direction: column; align-items: center; }
+  #root .f01-accroche-hero { font-size: 11.5cqw; font-weight: 500; line-height: 0.92; letter-spacing: -0.02em; color: #2e4a2a; }
+  #root .f01-accroche-w { display: inline-block; }
+  #root .f01-accroche-rule { width: 42cqw; height: 2px; background: #2e4a2a; margin: 3.2cqw 0 2.6cqw; transform-origin: left center; }
+  #root .f01-accroche-sub { font-size: 5cqw; font-weight: 500; font-style: italic; letter-spacing: -0.02em; color: #b96f84; }
+
+</style>
+<div id="root" data-composition-id="01-accroche" data-start="0" data-duration="4" data-width="1920" data-height="1080">
+  <div class="f01-accroche-bg clip" id="f01-accroche-bg" data-start="0" data-duration="4" data-track-index="0"></div>
+  <div class="f01-accroche-stage clip" id="f01-accroche-stage" data-start="0" data-duration="4" data-track-index="1">
+    <div class="f01-accroche-topbar" id="f01-accroche-topbar"><span>Le baobab</span><span>01 / 06</span></div>
+
+    <div class="f01-accroche-wrap" id="f01-accroche-wrap">
+      <div class="f01-accroche-hero"><span class="f01-accroche-w" id="f01-accroche-w1">2&#8239;000</span> <span class="f01-accroche-w" id="f01-accroche-w2">ans</span></div>
+      <div class="f01-accroche-rule" id="f01-accroche-rule"></div>
+      <div class="f01-accroche-sub" id="f01-accroche-sub">toujours debout.</div>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#f01-accroche-topbar", { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0);
+
+  tl.fromTo("#f01-accroche-wrap", { scale: 1 }, { scale: 1.04, duration: 3.5, ease: "none" }, 0);
+  tl.fromTo("#f01-accroche-w1", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.25);
+  tl.fromTo("#f01-accroche-w2", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.75);
+  tl.fromTo("#f01-accroche-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power2.inOut" }, 1.35);
+  tl.fromTo("#f01-accroche-sub", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 1.6);
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines["01-accroche"] = tl;
+})();
+</script>
+</template>
